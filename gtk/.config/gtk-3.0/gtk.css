@@ -1,0 +1,16 @@
+/*
+ * Decrease the tabs bar height in gnome-terminal.
+ *
+ * Adapted from:
+ * https://stackoverflow.com/questions/36869701/decrease-the-tabs-bar-height-in-gnome-terminal
+ *
+ * Make gnome-terminal screen height a perfect multiple of font height (1.15
+ * font scaling system-wide and Terminus Regular 13) so that there is no
+ * wasted space. Involves reducing height of tabs. You can also check for
+ * pixel perfect alignment by highlighting near the bottom edge to see if you
+ * can see the top of the highlight on the line following the bottom line.
+ */
+terminal-window notebook > header.top {
+  padding-top: 0px;
+  padding-bottom: 1px;  /* This pixel is needed for perfect alignment */
+}

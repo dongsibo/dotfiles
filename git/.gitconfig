@@ -1,0 +1,9 @@
+[user]
+	name = Sibo Dong
+	email = dongsibo@users.noreply.github.com
+[core]
+	editor = vim
+	autocrlf = input
+[alias]
+	tree = log --all --decorate --oneline --graph
+	twig = log --decorate --oneline --graph
