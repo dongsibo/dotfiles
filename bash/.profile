@@ -12,4 +12,4 @@ export PATH
 export EDITOR=vim
 export VISUAL=vim
 
-export LESS='--RAW-CONTROL-CHARS --quit-if-one-screen'
+export LESS='--RAW-CONTROL-CHARS --quit-if-one-screen --ignore-case'
