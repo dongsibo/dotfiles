@@ -8,8 +8,7 @@
 # Don't put duplicate lines or lines starting with space in the history list.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth:erasedups
-HISTIGNORE=exit
-#HISTIGNORE="&: *:[bf]g:exit:history:hostname:jobs:ls:pwd:whoami"
+HISTIGNORE="exit:logout"
 
 # Append to the history file, don't overwrite it (to kind of support multiple
 # bash sessions; doesn't deal with duplicates well)
