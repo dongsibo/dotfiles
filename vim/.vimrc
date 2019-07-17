@@ -60,9 +60,7 @@ set ignorecase smartcase     " case-insensitive search (unless capitals)
 
 colorscheme my-pablo                       " custom pablo colorscheme
 set number relativenumber                  " hybrid line numbers
-"set listchars=tab:>-,trail:·,nbsp:… list!  " show some invsible characters
-"set listchars=tab:«\ »,trail:·,nbsp:… list!  " show some invsible characters
-set listchars=tab:»\ ,trail:·,nbsp:… list!  " show some invsible characters
+set listchars=tab:»\ ,trail:·,nbsp:… list  " show some invsible characters
 set hlsearch                               " highlight all occurences from a search
 set visualbell                             " turn on visual bell; much quieter than audio blink
 
