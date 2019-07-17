@@ -70,5 +70,5 @@ set visualbell                             " turn on visual bell; much quieter t
 " commands
 " ========
 
-" toggle highlight search with backslash
-nnoremap \ :set hlsearch!<CR>
+" toggle highlight search
+nnoremap <silent> \ :set hlsearch! | :set hlsearch?<CR>
