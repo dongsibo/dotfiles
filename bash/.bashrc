@@ -5,6 +5,34 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+##
+# Make entries in HISTFILE unique.
+#
+# Retrains ordering of commands. If duplicates are found, the latest position
+# of the command is used.
+##
+_uniq_history() {
+    local tmphist
+
+    tmphist=$(mktemp)
+
+    # Append history list to history file. We need to do this or duplicate
+    # entries will still appear in the history file. Not sure why.
+    # FIXME This is kind of janky; if HISTFILESIZE is smaller than it's current
+    # capacity and the the current history list, then we will lose history. A
+    # very large HISTFILESIZE should counteract this (might even want to have
+    # unlimited size).
+    history -a
+
+    # Remove duplicates from history. See https://unix.stackexchange.com/a/78846.
+    tac "$HISTFILE" | awk '!x[$0]++' | tac >| "$tmphist"
+    cat "$tmphist" >| "$HISTFILE"
+
+    rm -f -- "$tmphist"
+}
+
+trap '_uniq_history' HUP INT QUIT TERM EXIT
+
 # Don't put duplicate lines or lines starting with space in the history list.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth:erasedups
@@ -43,9 +71,6 @@ alias l='ls -CF'
 # Enable fuzzy-finding (see fzf documentation for more details)
 [[ -r /usr/share/fzf/key-bindings.bash ]] && . /usr/share/fzf/key-bindings.bash
 [[ -r /usr/share/fzf/completion.bash ]] && . /usr/share/fzf/completion.bash
-
-
-# TODO Put prompt related stuff it its own little file to be source here
 
 ##
 # Print the name of the current python virtual environment.
@@ -97,7 +122,7 @@ _build_prompt() {
 }
 
 ##
-# Provide titlebar information for xterms
+# Provide titlebar information for xterms.
 ##
 _xterm_title() {
     PS1="\[\e]0;\u@\h: \w\a\]$PS1"
@@ -118,34 +143,3 @@ GIT_PS1_HIDE_IF_PWD_IGNORED=true
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
 PROMPT_COMMAND='_build_prompt $?; _xterm_title'
-
-
-# TODO Put history related stuff in its own file
-
-##
-# Make entries in HISTFILE unique.
-#
-# Retains ordering of commands. If duplicates are found, the latest position
-# of the command is used.
-##
-_uniq_history() {
-    local tmphist
-
-    tmphist=$(mktemp)
-
-    # Append history list to history file. We need to do this or duplicate
-    # entries will still appear in the history file. Not sure why.
-    # FIXME This is kind of janky; if HISTFILESIZE is smaller than it's current
-    # capacity and the the current history list, then we will lose history. A
-    # very large HISTFILESIZE should counteract this (might even want to have
-    # unlimited size).
-    history -a
-
-    # Remove duplicates from history. See https://unix.stackexchange.com/a/78846.
-    tac "$HISTFILE" | awk '!x[$0]++' | tac >| "$tmphist"
-    cat "$tmphist" >| "$HISTFILE"
-
-    rm -f -- "$tmphist"
-}
-
-trap '_uniq_history' HUP INT QUIT TERM EXIT
