@@ -110,14 +110,14 @@ _build_prompt() {
     # [Server Fault](https://serverfault.com/q/97503). Basically the same way
     # that zsh highlights no newlines. Can be a little wonky with text reflow
     # (due to reliance on spaces for spacing).
-    no_newline="\[\e[1;7m%\e[m$( printf "%*s" "$(( COLUMNS-1 ))" "" )\r\e[K\]"
+    no_newline="\[\e[1;7m%\e[m$( printf "%*s" "$(( COLUMNS - 1 ))" "" )\r\e[K\]"
     prefix="${no_newline}\n\[\e[1;38;5;244m\]$( _venv_info )\[\e[0;1;38;5;212m\]\w\[\e[0m\]"
     suffix="\n\[\e[1;38;5;203m\]$( _print_exit_code "$1" )\[\e[0;93m\]>>\[\e[0m\] "
 
     if declare -F __git_ps1 > /dev/null; then
         __git_ps1 "$prefix" "$suffix" " (\[\\\e[1m\]%s)"
     else
-        PS1=${prefix}${suffix}
+        PS1="${prefix}${suffix}"
     fi
 }
 
