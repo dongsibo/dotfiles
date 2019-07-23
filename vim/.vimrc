@@ -62,6 +62,7 @@ colorscheme my-pablo                       " custom pablo colorscheme
 set number relativenumber                  " hybrid line numbers
 set listchars=tab:»\ ,trail:·,nbsp:… list  " show some invsible characters
 set hlsearch                               " highlight all occurences from a search
+set splitbelow splitright                  " sane split placement
 set visualbell                             " turn on visual bell; much quieter than audio blink
 
 
