@@ -29,3 +29,5 @@ export SYSTEMD_LESS="\
 --no-init \
 --LONG-PROMPT \
 $LESS"
+
+export FZF_DEFAULT_OPTS='--color=bg+:237'
