@@ -7,7 +7,7 @@
 "   ░░██   ░██ ███ ░██ ░██░███   ░░█████
 "    ░░    ░░ ░░░  ░░  ░░ ░░░     ░░░░░
 "
-" NOTE some settings or commands are already provided in the system-wide vimrc
+" NOTE some settings or commands are already provided in system-wide vimrcs
 " (one of which is /usr/share/vim/vimfiles/archlinux.vim)
 
 
