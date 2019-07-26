@@ -36,7 +36,7 @@ trap '_uniq_history' HUP INT QUIT TERM EXIT
 # Don't put duplicate lines or lines starting with space in the history list.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth:erasedups
-HISTIGNORE="exit:logout"
+HISTIGNORE=exit:logout
 
 # Append to the history file, don't overwrite it (to kind of support multiple
 # bash sessions; doesn't deal with duplicates well)
@@ -117,7 +117,7 @@ _build_prompt() {
     if declare -F __git_ps1 > /dev/null; then
         __git_ps1 "$prefix" "$suffix" " (\[\\\e[1m\]%s)"
     else
-        PS1="${prefix}${suffix}"
+        PS1=$prefix$suffix
     fi
 }
 
@@ -125,7 +125,7 @@ _build_prompt() {
 # Provide titlebar information for xterms.
 ##
 _xterm_title() {
-    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;\u@\h: \w\a\]"$PS1
 }
 
 [[ -r /usr/share/git/git-prompt.sh ]] && . /usr/share/git/git-prompt.sh
