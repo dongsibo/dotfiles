@@ -143,3 +143,5 @@ GIT_PS1_HIDE_IF_PWD_IGNORED=true
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
 PROMPT_COMMAND='_build_prompt $?; _xterm_title'
+
+# vim: set filetype=sh:

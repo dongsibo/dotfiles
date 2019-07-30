@@ -31,3 +31,5 @@ export SYSTEMD_LESS="\
 $LESS"
 
 export FZF_DEFAULT_OPTS='--color=bg+:237'
+
+# vim: set filetype=sh:

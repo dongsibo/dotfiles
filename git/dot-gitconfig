@@ -8,3 +8,5 @@
 [alias]
 	tree = log --all --decorate --oneline --graph
 	twig = log --decorate --oneline --graph
+
+# vim: set filetype=gitconfig:

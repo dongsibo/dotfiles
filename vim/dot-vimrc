@@ -48,7 +48,7 @@ set laststatus=2 noshowmode
 " =======
 
 runtime! defaults.vim        " use enhanced Vim defaults
-set mouse=                   " reset the mouse setting from defaults
+"set mouse=                   " reset the mouse setting from defaults
 let g:skip_defaults_vim = 1  " do not source defaults.vim again (after loading this vimrc)
 set confirm                  " raise a dialogue for unsaved changes
 set hidden                   " allow buffer switching with unsaved changes
@@ -66,8 +66,8 @@ set splitbelow splitright                  " sane split placement
 set visualbell                             " turn on visual bell; much quieter than audio blink
 
 
-" commands
-" ========
+" commands/mappings
+" =================
 
 " toggle highlight search
 nnoremap <silent> \ :set hlsearch! | :set hlsearch?<CR>

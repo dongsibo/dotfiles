@@ -3,3 +3,5 @@
 #
 
 set colored-stats
+
+# vim: set filetype=readline:
