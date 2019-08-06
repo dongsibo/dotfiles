@@ -49,7 +49,8 @@ set laststatus=2 noshowmode
 
 runtime! defaults.vim        " use enhanced Vim defaults
 "set mouse=                   " reset the mouse setting from defaults
-let g:skip_defaults_vim = 1  " do not source defaults.vim again (after loading this vimrc)
+let g:skip_defaults_vim=1    " do not source defaults.vim again (after loading this vimrc)
+let mapleader=" "            " set leader key to space
 set confirm                  " raise a dialogue for unsaved changes
 set hidden                   " allow buffer switching with unsaved changes
 set ignorecase smartcase     " case-insensitive search (unless capitals)
@@ -70,4 +71,4 @@ set visualbell                             " turn on visual bell; much quieter t
 " =================
 
 " toggle highlight search
-nnoremap <silent> \ :set hlsearch! | :set hlsearch?<CR>
+nnoremap <silent> <leader>\ :set hlsearch! | :set hlsearch?<CR>
