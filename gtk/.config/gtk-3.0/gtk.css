@@ -11,6 +11,11 @@
  * dropped support for bitmap fonts in version 1.44.x (not sure why this isn't
  * a major release since it breaks backwards compatibility).
  *
+ * If using terminus-font-otb (like from Arch Linux's community repo), then
+ * just use normal cell spacing and size 13 font like before (Terminus Medium
+ * 13). Harfbuzz currently supports OpenType bitmap fonts (which is the shaping
+ * engine that pango uses).
+ *
  * Involves reducing height of the tab header bar. You can also check for pixel
  * perfect alignment by highlighting near the bottom edge to see if you can see
  * the top of the highlight on the line following the bottom line.
