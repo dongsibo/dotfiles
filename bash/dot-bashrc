@@ -86,7 +86,7 @@ alias l='ls -CF'
 ##
 _venv_info() {
     if [[ -n $VIRTUAL_ENV ]]; then
-        printf "%s " "$(basename "$VIRTUAL_ENV")"
+        printf "%s" "$(basename "$VIRTUAL_ENV")"
     fi
 }
 
@@ -110,13 +110,21 @@ _build_prompt() {
     local no_newline
     local prefix
     local suffix
+    local venv
+    local venv_prefix
+
+    # Prepend virtualenv with an arrow
+    venv=$(_venv_info)
+    if [[ -n $venv ]]; then
+        venv_prefix=$' \u2192 '
+    fi
 
     # Print reverse video if output does not end with a newline. Taken from
     # [Server Fault](https://serverfault.com/q/97503). Basically the same way
     # that zsh highlights no newlines. Can be a little wonky with text reflow
     # (due to reliance on spaces for spacing).
     no_newline="\[\e[1;7m%\e[m$( printf "%*s" "$(( COLUMNS - 1 ))" "" )\r\e[K\]"
-    prefix="${no_newline}\n\[\e[1;38;5;244m\]$( _venv_info )\[\e[0;1;38;5;212m\]\w\[\e[0m\]"
+    prefix="${no_newline}\n\[\e[1;38;5;212m\]\w\[\e[0m\]${venv_prefix}\[\e[1;38;5;244m\]${venv}\e[0m"
     suffix="\n\[\e[1;38;5;203m\]$( _print_exit_code "$1" )\[\e[0;93m\]>>\[\e[0m\] "
 
     if declare -F __git_ps1 > /dev/null; then
