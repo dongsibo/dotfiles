@@ -34,6 +34,9 @@ Plug 'justinmk/vim-syntax-extra'  " better syntax highlighting for c-related fil
 " vim-fugitive for git commits)
 "Plug 'junegunn/fzf.vim'           " fzf enhancements for vim
 
+Plug 'jalvesaq/nvim-r', {'tag': '*'}  " r plugin for (neo)vim
+  Plug 'chrisbra/csv.vim'             " csv file support
+
 call plug#end()
 
 
