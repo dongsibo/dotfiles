@@ -46,6 +46,9 @@ call plug#end()
 " lightline.vim
 set laststatus=2 noshowmode
 
+" nvim-r
+let R_args = ['--no-save']
+
 
 " general
 " =======
