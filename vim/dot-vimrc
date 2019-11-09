@@ -48,6 +48,8 @@ set laststatus=2 noshowmode
 
 " nvim-r
 let R_args = ['--no-save']
+let R_openpdf = 1             " only open pdf viewer first time pdflatex is called
+let R_pdfviewer = 'gio open'  " nvim-r doesn't use R's R_PDFVIEWER; oh well
 
 
 " general
