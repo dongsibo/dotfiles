@@ -28,14 +28,15 @@ call plug#begin('~/.vim/plugged')
 " NOTE remember to use single quotes
 
 Plug 'itchyny/lightline.vim'      " lightweight statusline
-Plug 'justinmk/vim-syntax-extra'  " better syntax highlighting for c-related files
+Plug 'justinmk/vim-syntax-extra'  " better syntax highlighting for C-related files
 
 " NOTE additional functions may be required for some functions (like
 " vim-fugitive for git commits)
 "Plug 'junegunn/fzf.vim'           " fzf enhancements for vim
 
-Plug 'jalvesaq/nvim-r'            " r plugin for (neo)vim
-  Plug 'chrisbra/csv.vim'         " csv file support
+Plug 'jalvesaq/nvim-r'                 " r plugin for (neo)vim
+  Plug 'chrisbra/csv.vim'              " csv file support
+  Plug 'vim-pandoc/vim-pandoc-syntax'  " better syntax highlighting for .Rmd files
 
 call plug#end()
 
