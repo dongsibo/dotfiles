@@ -2,6 +2,6 @@
 # ~/.Renviron
 #
 
-R_LIBS_USER='~/.local/lib/R/3.6/library'
+R_LIBS_USER='~/.local/lib/R/library'
 R_BROWSER='/usr/bin/gio open'
 R_PDFVIEWER='/usr/bin/gio open'
