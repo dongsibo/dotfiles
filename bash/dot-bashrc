@@ -5,6 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# This is a hacky way to implement some better history features that zsh has.
+# I would switch to zsh, but some programs that I use like tlp only have
+# support for completion in bash. I have tried to some of zsh's functions to
+# load tlp's bash completions before, but the use of _init_completion in the
+# completion file causes this to fail.
 ##
 # Make entries in HISTFILE unique.
 #
@@ -25,6 +30,11 @@ _uniq_history() {
     history -a
 
     # Remove duplicates from history. See https://unix.stackexchange.com/a/78846.
+    # Note that bash history files by default don't seem to do very well with
+    # heredocs (mostly the multi-line aspect). They can't properly recognize
+    # when a string of lines in the file all belong to a single heredoc. Not
+    # sure if there is a way to fix this or if other shells can deal with this
+    # properly (zsh does do this; at least with grml's zsh config).
     tac "$HISTFILE" | awk '!x[$0]++' | tac >| "$tmphist"
     cat "$tmphist" >| "$HISTFILE"
 
