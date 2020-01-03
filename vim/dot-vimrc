@@ -57,6 +57,7 @@ let R_pdfviewer = 'gio open'  " nvim-r doesn't use R's R_PDFVIEWER; oh well
 " =======
 
 runtime! defaults.vim        " use enhanced Vim defaults
+runtime! ftplugin/man.vim    " enable :Man
 "set mouse=                   " reset the mouse setting from defaults
 let g:skip_defaults_vim=1    " do not source defaults.vim again (after loading this vimrc)
 let mapleader=" "            " set leader key to space
