@@ -28,7 +28,9 @@ call plug#begin('~/.vim/plugged')
 " NOTE remember to use single quotes
 
 Plug 'itchyny/lightline.vim'      " lightweight statusline
+
 Plug 'justinmk/vim-syntax-extra'  " better syntax highlighting for C-related files
+Plug 'vim-python/python-syntax'   " better syntax highlighting for Python
 
 " NOTE additional functions may be required for some functions (like
 " vim-fugitive for git commits)
@@ -46,6 +48,9 @@ call plug#end()
 
 " lightline.vim
 set laststatus=2 noshowmode
+
+" python-syntax
+let g:python_highlight_all = 1
 
 " nvim-r
 let R_args = ['--no-save']
