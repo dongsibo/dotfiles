@@ -53,8 +53,8 @@ HISTIGNORE=exit:logout
 shopt -s histappend
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=4000
-HISTFILESIZE=8000
+HISTSIZE=5000
+HISTFILESIZE=10000
 
 # Enable colour support of `ls` and also add handy aliases
 if [[ -x /usr/bin/dircolors ]]; then
