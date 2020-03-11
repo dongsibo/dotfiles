@@ -32,20 +32,4 @@ $LESS"
 
 export FZF_DEFAULT_OPTS='--color=bg+:237'
 
-# gnome-shell 1:3.36.0-2 has some bugs in the JS code that tries to start
-# ibus-daemon. One of the error messages from `systemctl --usr status '*'`:
-#
-#     Failed to launch ibus-daemon: launcher.launch is not a function
-#
-# `launch` should be `spawnv` instead. There is apparently another unfixed
-# issue with input method; you can look for more info here:
-#
-# https://gitlab.gnome.org/GNOME/gnome-shell/issues/2341
-#
-# Leave this bit of code in until the bug in GNOME Shell is fixed.
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-ibus-daemon --daemonize --xim
-
 # vim: set filetype=sh:
