@@ -87,6 +87,9 @@ alias l='ls -CF'
 [[ -r /usr/share/fzf/key-bindings.bash ]] && . /usr/share/fzf/key-bindings.bash
 [[ -r /usr/share/fzf/completion.bash ]] && . /usr/share/fzf/completion.bash
 
+# Enable bash completion for pandoc if available
+[[ -r /usr/share/pandoc/data/bash_completion.tpl ]] && eval "$(pandoc --bash-completion)"
+
 ##
 # Print the name of the current python virtual environment.
 #
@@ -167,4 +170,4 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 
 PROMPT_COMMAND='_build_prompt $?; _xterm_title'
 
-# vim: set filetype=sh:
+# vim: set filetype=sh :
