@@ -13,6 +13,13 @@
 	process = git-lfs filter-process
 	required = true
 
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[mergetool]
+	keepBackup = false
+
 [user]
 	name = Sibo Dong
 	email = dongsibo@users.noreply.github.com
