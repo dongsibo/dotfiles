@@ -35,4 +35,13 @@ export FZF_DEFAULT_OPTS='--color=bg+:237'
 # Enable Wayland for Firefox
 [ "$XDG_SESSION_TYPE" = wayland ] && export MOZ_ENABLE_WAYLAND=1
 
+# Disable GStreamer VA-API driver whitelist (to use iHD from
+# intel-media-driver). This is for gstreamer-vaapi 1.16. 1.18 will apparently
+# have iHD from intel-media-driver included in the whitelist, so I can remove
+# this line once that time comes. To see if this works, I should check that
+# there are more than 0 features found when running `gst-inspect-1.0 vaapi`.
+# See https://blogs.igalia.com/vjaquez/2020/01/08/gstreamer-vaapi-1-16-and-libva-2-6-in-debian/
+# for more details.
+export GST_VAAPI_ALL_DRIVERS=1
+
 # vim: set filetype=sh :
