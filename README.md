@@ -5,10 +5,10 @@ I manage them with [GNU Stow](https://www.gnu.org/software/stow/ 'Stow - GNU Pro
 
 ## Example Usage
 
-To install the contents of `vim` to your home directory, say `/home/dongsibo`:
+To install the contents of `vim` to your home directory, say `${HOME}`:
 
 ```
-stow --target=/home/dongsibo vim
+stow --target=${HOME} vim
 ```
 
 The `--dotfiles` options is implied in `.stowrc`.
@@ -16,5 +16,5 @@ The `--dotfiles` options is implied in `.stowrc`.
 To unstow the contents of `vim` from your home directory:
 
 ```
-stow --target=/home/dongsibo --delete vim
+stow --target=${HOME} --delete vim
 ```
