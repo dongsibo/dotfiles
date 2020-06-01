@@ -36,9 +36,9 @@ Plug 'vim-python/python-syntax'   " better syntax highlighting for Python
 " vim-fugitive for git commits)
 "Plug 'junegunn/fzf.vim'           " fzf enhancements for vim
 
-Plug 'jalvesaq/nvim-r'                 " r plugin for (neo)vim
-  Plug 'chrisbra/csv.vim'              " csv file support
-  Plug 'vim-pandoc/vim-pandoc-syntax'  " better syntax highlighting for .Rmd files
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}  " r plugin for (neo)vim
+  Plug 'chrisbra/csv.vim'                     " csv file support
+  Plug 'vim-pandoc/vim-pandoc-syntax'         " better syntax highlighting for .Rmd files
 
 call plug#end()
 
