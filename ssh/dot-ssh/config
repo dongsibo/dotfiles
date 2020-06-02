@@ -1,0 +1,8 @@
+#
+# ~/.ssh/config
+#
+
+Host *
+    SendEnv LANG LC_*
+
+# vim: set filetype=sshconfig :
