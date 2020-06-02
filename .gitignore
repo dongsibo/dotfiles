@@ -1,7 +1,3 @@
-# ssh
-ssh/dot-ssh/*
-ssh/dot-ssh/!config
-
 # vim
 vim/dot-vim/.netrwhist
 vim/dot-vim/autoload
