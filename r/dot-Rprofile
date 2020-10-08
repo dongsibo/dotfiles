@@ -2,11 +2,10 @@
 # ~/.Rprofile
 #
 
-# Set CRAN mirror
-local({
-  r <- getOption("repos")
-  r["CRAN"] <- "https://cloud.r-project.org"
-  options(repos = r)
-})
+# This is called after everything else in R_PROFILE_USER
+.First <- function() {
+    library(colorout)                               # colourize R output
+    options(repos = "https://cloud.r-project.org")  # use 0-Cloud CRAN mirror
+}
 
-# vim: set ft=r:
+# vim: set filetype=r :
