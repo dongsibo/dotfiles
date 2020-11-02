@@ -8,4 +8,8 @@
     options(repos = "https://cloud.r-project.org")  # use 0-Cloud CRAN mirror
 }
 
+# Dynamically set width
+options(width = as.integer(system("tput cols", intern = TRUE)))
+options(setWidthOnResize = TRUE)
+
 # vim: set filetype=r :
