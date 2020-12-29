@@ -121,10 +121,8 @@ _print_exit_code() {
 ##
 _build_prompt() {
     local no_newline
-    local prefix
-    local suffix
-    local venv
-    local venv_prefix
+    local prefix suffix
+    local venv venv_prefix
 
     # Prepend virtualenv with an arrow
     venv=$(_venv_info)
