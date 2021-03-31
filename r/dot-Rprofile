@@ -4,7 +4,9 @@
 
 # This is called after everything else in R_PROFILE_USER
 .First <- function() {
-    library(colorout)                               # colourize R output
+    # `require` (as opposed to `library`) is used because the following
+    # package(s) are not available on CRAN; see https://git.io/JY2oM.
+    require(colorout)                               # colourize R output
     options(repos = "https://cloud.r-project.org")  # use 0-Cloud CRAN mirror
 }
 
