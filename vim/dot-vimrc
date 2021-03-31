@@ -69,7 +69,7 @@ let g:skip_defaults_vim=1    " do not source defaults.vim again (after loading t
 let mapleader=" "            " set leader key to space
 set confirm                  " raise a dialogue for unsaved changes
 set hidden                   " allow buffer switching with unsaved changes
-set history=500              " keep 500 lines of command line history
+set history=1000             " keep 1000 lines of command line history
 set ignorecase smartcase     " case-insensitive search (unless capitals)
 set spell spelllang=en_ca    " turn on spell checking
 
