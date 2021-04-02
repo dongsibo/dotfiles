@@ -53,8 +53,14 @@ HISTIGNORE=exit:logout
 shopt -s histappend
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=5000
-HISTFILESIZE=10000
+# NOTE: On Arch Linux, /usr/bin/sh is a symlink to /usr/bin/bash. Both shells
+# will use the same HISTFILE (by default), but not the same HISTSIZE or
+# HISTFILESIZE. Ultimately, this means that if the variables below are not
+# exported so that they are visible to sh, then the HISTFILE will end up
+# truncated to about 500 entries if HISTSIZE and/or HISTFILESIZE are larger
+# than 500.
+export HISTSIZE=5000
+export HISTFILESIZE=10000
 
 # Enable colour support of `ls` and also add handy aliases
 if [[ -x /usr/bin/dircolors ]]; then
