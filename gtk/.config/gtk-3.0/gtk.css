@@ -1,20 +1,11 @@
 /*
  * Decrease the tabs bar height in gnome-terminal.
  *
- * Adapted from:
- * https://stackoverflow.com/questions/36869701/decrease-the-tabs-bar-height-in-gnome-terminal
+ * Adapted from <https://stackoverflow.com/questions/36869701/>.
  *
  * Make gnome-terminal screen height a perfect multiple of font height (1.15
- * font scaling system-wide, Terminus Regular (TTF) 12 and 1.15x1.15 cell
- * spacing) so that there is no wasted space. TTF is needed instead of the
- * original bitmap font because the font library for many GTK apps, pango,
- * dropped support for bitmap fonts in version 1.44.x (not sure why this isn't
- * a major release since it breaks backwards compatibility).
- *
- * If using terminus-font-otb (like from Arch Linux's community repo), then
- * just use normal cell spacing and size 13 font like before (Terminus Medium
- * 13). Harfbuzz currently supports OpenType bitmap fonts (which is the shaping
- * engine that pango uses).
+ * font scaling system-wide, Terminus 13, and normal cell spacing) so that
+ * there is no wasted space.
  *
  * Involves reducing height of the tab header bar. You can also check for pixel
  * perfect alignment by highlighting near the bottom edge to see if you can see
