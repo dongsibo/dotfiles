@@ -5,7 +5,7 @@
  *
  * Make gnome-terminal screen height a perfect multiple of font height (1.15
  * font scaling system-wide, Terminus 13, and normal cell spacing) so that
- * there is no wasted space.
+ * there is no wasted space on a 1080p screen.
  *
  * Involves reducing height of the tab header bar. You can also check for pixel
  * perfect alignment by highlighting near the bottom edge to see if you can see
