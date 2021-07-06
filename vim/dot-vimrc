@@ -71,6 +71,7 @@ set confirm                  " raise a dialogue for unsaved changes
 set hidden                   " allow buffer switching with unsaved changes
 set history=1000             " keep 1000 lines of command line history
 set ignorecase smartcase     " case-insensitive search (unless capitals)
+setlocal spelllang=en_ca     " use Canadian word list for spellchecking
 
 
 " ui
@@ -88,4 +89,6 @@ set visualbell                             " turn on visual bell; much quieter t
 " =================
 
 " toggle highlight search
-nnoremap <silent> <leader>\ :set hlsearch! | :set hlsearch?<CR>
+nnoremap <silent> <Leader>\ :set hlsearch! | :set hlsearch?<CR>
+" toggle spellchecking
+nnoremap <silent> <Leader>s :setlocal spell! | :setlocal spell?<CR>
