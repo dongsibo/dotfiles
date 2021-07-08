@@ -12,4 +12,4 @@
 " ==
 
 colorscheme slate                 " more readable than pablo with gui
-set guifont=Terminus\ Medium\ 12  " only the best font ever
+set guifont=Terminus\ Medium\ 12
