@@ -14,7 +14,7 @@ There is no easy way to list unstowed (dotfile) packages (as far as I know).
 Assuming your dotfiles are installed to `~/dotfiles/`, the following command can give you an idea of which dotfile packages are unstowed:
 
 ```
-find ~/dotfiles -maxdepth 1 ! \( -path ~/dotfiles -o -path '*/.git' \) -type d -printf '%f\0' \
+find ~/dotfiles -maxdepth 1 ! -path ~/dotfiles ! -path '*/.git' -type d -printf '%f\0' \
     | xargs -0r stow -nd ~/dotfiles -v --dotfiles
 ```
 
