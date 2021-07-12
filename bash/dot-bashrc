@@ -29,7 +29,7 @@ _uniq_history() {
     # unlimited size).
     history -a
 
-    # Remove duplicates from history. See https://unix.stackexchange.com/a/78846.
+    # Remove duplicates from history. See <https://unix.stackexchange.com/a/78846>.
     # Note that bash history files by default don't seem to do very well with
     # heredocs (mostly the multi-line aspect). They can't properly recognize
     # when a string of lines in the file all belong to a single heredoc. Not
@@ -137,9 +137,9 @@ _build_prompt() {
     fi
 
     # Print reverse video if output does not end with a newline. Taken from
-    # [Server Fault](https://serverfault.com/q/97503). Basically the same way
-    # that zsh highlights no newlines. Can be a little wonky with text reflow
-    # (due to reliance on spaces for spacing).
+    # <https://serverfault.com/q/97503>. Basically the same way that zsh
+    # highlights no newlines. Can be a little wonky with text reflow (due to
+    # reliance on spaces for spacing).
     no_newline="\[\e[1;7m%\e[m$( printf "%*s" "$(( COLUMNS - 1 ))" "" )\r\e[K\]"
     prefix="${no_newline}\n\[\e[1;38;5;212m\]\w\[\e[0m\]${venv_prefix}\[\e[1;38;5;244m\]${venv}\e[0m"
     suffix="\n\[\e[1;38;5;203m\]$( _print_exit_code "$1" )\[\e[0;93m\]>>\[\e[0m\] "
