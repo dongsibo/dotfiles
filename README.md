@@ -5,7 +5,7 @@ I manage them with [GNU Stow](https://www.gnu.org/software/stow/ 'Stow - GNU Pro
 
 ## Example usage
 
-See <https://blog.xero.nu/managing_dotfiles_with_gnu_stow>.
+See <https://github.com/xero/dotfiles#how-it-works>.
 The dotfiles here also make use of a `.stowrc` file to be read by *stow* (see `man stow.8`).
 
 ### List unstowed dotfiles
