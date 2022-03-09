@@ -32,8 +32,4 @@ $LESS"
 
 export FZF_DEFAULT_OPTS='--color=bg+:237'
 
-# Enable Wayland for Firefox (for VA-API support). No steps needed for X.org
-# since the EGL backend is used by default since Firefox 94.
-[ "$XDG_SESSION_TYPE" = wayland ] && export MOZ_ENABLE_WAYLAND=1
-
 # vim: set filetype=sh :
