@@ -77,7 +77,7 @@ setlocal spelllang=en_ca     " use Canadian word list for spellchecking
 " ui
 " ==
 
-colorscheme my-pablo                       " custom pablo colorscheme
+colorscheme pablolegacy                    " modified legacy pablo colour scheme
 set number relativenumber                  " hybrid line numbers
 set listchars=tab:»\ ,trail:·,nbsp:… list  " show some invsible characters
 set hlsearch                               " highlight all occurences from a search
