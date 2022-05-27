@@ -91,6 +91,15 @@ function! MyHighlights() abort
   highlight Statement	cterm=bold
   highlight Special	ctermfg=Blue	guifg=#729fcf
   highlight Title	cterm=bold
+  highlight NonText	cterm=bold
+  highlight EndOfBuffer	cterm=bold
+  highlight CursorLineNr	cterm=bold
+  highlight VisualNOS	cterm=bold,underline
+  highlight ModeMsg	cterm=bold
+  highlight MoreMsg	cterm=bold
+  highlight Question	cterm=bold
+  highlight TabLineSel	cterm=bold
+  highlight ToolbarButton	cterm=bold
 endfunction
 
 augroup MyColours
