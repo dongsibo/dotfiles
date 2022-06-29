@@ -80,26 +80,13 @@ setlocal spelllang=en_ca     " use Canadian word list for spellchecking
 " apply custom highlighting to the pablo colour scheme per
 " https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
 function! MyHighlights() abort
-  " use terminal emulator background and make some coloured text more readable
-  " (dependent on terminal emulator, in this case, GNOME Terminal), apply some
-  " bold not only in GUI but in colour terminals as well per
-  " https://github.com/vim/colorschemes/issues/170
-  "
-  " NOTE bolding here may be redudant in the future per the issue above
+  " use terminal emulator background, make some coloured text more readable
+  " (dependent on terminal emulator, in this case, GNOME Terminal), and apply
+  " some GUI-specific formatting in colour terminals as well
   highlight Normal	ctermbg=none
   highlight Comment	ctermfg=Grey
-  highlight Statement	cterm=bold
   highlight Special	ctermfg=Blue	guifg=#729fcf
-  highlight Title	cterm=bold
-  highlight NonText	cterm=bold
-  highlight EndOfBuffer	cterm=bold
-  highlight CursorLineNr	cterm=bold
   highlight VisualNOS	cterm=bold,underline
-  highlight ModeMsg	cterm=bold
-  highlight MoreMsg	cterm=bold
-  highlight Question	cterm=bold
-  highlight TabLineSel	cterm=bold
-  highlight ToolbarButton	cterm=bold
 endfunction
 
 augroup MyColours
