@@ -97,8 +97,8 @@ augroup END
 colorscheme pablo
 
 set number relativenumber                  " hybrid line numbers
-set listchars=tab:»\ ,trail:·,nbsp:… list  " show some invsible characters
-set hlsearch                               " highlight all occurences from a search
+set listchars=tab:»\ ,trail:·,nbsp:… list  " show some invisible characters
+set hlsearch                               " highlight all occurrences from a search
 set splitbelow splitright                  " sane split placement
 set visualbell                             " turn on visual bell; much quieter than audio blink
 
