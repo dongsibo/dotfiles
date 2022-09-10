@@ -16,6 +16,10 @@
     options(repos = "https://cloud.r-project.org")
 }
 
+# Use the console instead of a GUI for selection dialogs (e.g. help for
+# functions) as the GUI is kind of ugly; see https://stackoverflow.com/a/7431812
+options(menu.graphics = FALSE)
+
 # Dynamically set width for properly formatted console output when console
 # window changes sizes
 options(width = as.integer(system("tput cols", intern = TRUE)))
