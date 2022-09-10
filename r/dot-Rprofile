@@ -2,15 +2,22 @@
 # ~/.Rprofile
 #
 
-# This is called after everything else in R_PROFILE_USER
+# This is called after everything else in R_PROFILE_USER. To be honest, I'm not
+# really sure why `.First` is used here.
 .First <- function() {
-    # `require` (as opposed to `library`) is used because the following
-    # package(s) are not available on CRAN; see https://git.io/JY2oM.
-    require(colorout)                               # colourize R output
-    options(repos = "https://cloud.r-project.org")  # use 0-Cloud CRAN mirror
+    # `require` (as opposed to `library`) is used because the package(s)
+    # below are not available on CRAN; see https://git.io/JY2oM.
+
+    # Colourize R output to look pretty
+    require(colorout)
+
+    # Use 0-Cloud CRAN mirror to avoid mirror selection dialog and for
+    # "automatic redirection to servers worldwide"
+    options(repos = "https://cloud.r-project.org")
 }
 
-# Dynamically set width
+# Dynamically set width for properly formatted console output when console
+# window changes sizes
 options(width = as.integer(system("tput cols", intern = TRUE)))
 options(setWidthOnResize = TRUE)
 
