@@ -55,8 +55,8 @@ let g:python_highlight_all = 1
 " nvim-r
 let R_args = ['--no-save']
 let R_enable_comment = 1
-let R_openpdf = 1           " only open pdf viewer first time pdflatex is called
 let R_pdfviewer = 'evince'  " nvim-r doesn't use R's R_PDFVIEWER; oh well
+let R_openpdf = 1           " only open pdf viewer first time pdflatex is called
 let r_syntax_folding = 1
 
 
